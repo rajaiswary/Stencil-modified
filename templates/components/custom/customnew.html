@@ -1,0 +1,8 @@
+<h2 class="page-heading">{{lang 'products.new' }}</h2>
+
+
+{{#if settings.data_tag_enabled}}
+    {{> components/custom/customcarousel products=products list="New Products"}}
+{{else}}
+    {{> components/custom/customcarousel products=products}}
+{{/if}}

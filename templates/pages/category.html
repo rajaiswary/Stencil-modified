@@ -1,0 +1,60 @@
+---
+products:
+    new:
+        limit: 3
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    men:
+    limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: 3
+carousel: {{theme_settings.homepage_show_carousel}}
+
+---
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "hero"}}
+{{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows play_pause_button=theme_settings.homepage_show_carousel_play_pause_button}}
+
+
+{{/partial}}
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{>components/custom/customcat}}
+{{#if category.image}}
+    {{> components/common/responsive-img
+        image=category.image
+        fallback_size=theme_settings.zoom_size
+        lazyload=theme_settings.lazyload_mode
+        class="category-header-image"
+    }}
+{{/if}}
+{{#unless theme_settings.hide_category_page_heading }}
+    <!-- <h1 class="page-heading">{{category.name}}</h1> -->
+    {{{region name="category_below_header"}}}
+{{/unless}}
+{{{category.description}}}
+<div class="page">
+    
+
+    
+</div>
+
+{{/partial}}
+{{> layout/base}}

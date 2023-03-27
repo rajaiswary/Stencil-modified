@@ -1,0 +1,17 @@
+{{#if customer}}
+<a href="{{urls.account.index}}" aria-label="{{lang 'common.account'}}">
+    {{lang 'common.account'}}
+</a>
+<a href="{{urls.auth.logout}}" aria-label="{{lang 'common.logout'}}">
+    {{lang 'common.logout'}}
+</a>
+{{else}}
+<a href="{{urls.auth.login}}" aria-label="{{lang 'common.login'}}">
+    {{lang 'common.login'}}
+</a>
+{{#if settings.account_creation_enabled}}
+<a href="{{urls.auth.create_account}}" aria-label="{{lang 'common.sign_up'}}">
+    {{lang 'common.sign_up'}}
+</a>
+{{/if}}
+{{/if}}

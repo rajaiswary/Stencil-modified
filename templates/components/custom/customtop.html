@@ -1,0 +1,12 @@
+<h2 class="page-heading">{{lang 'products.top' }}</h2>
+
+<ul  data-product-type="top_sellers"  {{#if settings.data_tag_enabled}} data-list-name="Most Popular Products" {{/if}}>
+{{#each products}}
+<li class="product">
+    {{>components/custom/customcard settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
+</li>
+{{/each}}
+</ul>
+
+
+  
