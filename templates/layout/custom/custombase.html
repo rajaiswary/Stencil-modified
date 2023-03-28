@@ -31,8 +31,20 @@
 
     <script async src="{{cdn 'assets/dist/theme-bundle.font.js' resourceHint='preload' as='script'}}"></script>
 
-    {{{stylesheet '/assets/css/theme.css'}}}
 
+
+    {{{stylesheet '/assets/css/customtheme.css'}}}
+
+    {{{stylesheet '/assets/css/theme.css'}}}   
+    <link rel="stylesheet" href="{{cdn '../../assets/custom/css/font-awesome.css'}}">
+    <link href="{{cdn '../../assets/custom/css/font-awesome.css'}}" rel="stylesheet">
+    <link href="{{cdn '../../assets/custom/css/bootstrap.css'}}" rel="stylesheet">   
+    <link href="{{cdn '../../assets/custom/css/jquery.smartmenus.bootstrap.css'}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{cdn '../../assets/custom/css/jquery.simpleLens.css'}}">    
+    <link rel="stylesheet" type="text/css" href="{{cdn '../../assets/custom/css/slick.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{cdn '../../assets/custom/css/nouislider.css'}}">
+    <link id="switcher" href="{{cdn '../../assets/custom/css/theme-color/default-theme.css'}}" rel="stylesheet">
+    <link href="{{cdn '../../assets/custom/css/sequence-theme.modern-slide-in.css'}}" rel="stylesheet" media="all">
     {{{head.scripts}}}
 
     {{~inject 'zoomSize' theme_settings.zoom_size}}
@@ -69,6 +81,19 @@
         onload="onThemeBundleMain()"></script>
 
     {{{footer.scripts}}}
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{{cdn '../../../assets/custom/js/bootstrap.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../assets/custom/js/jquery.smartmenus.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../assets/custom/js/jquery.smartmenus.bootstrap.js'}}"></script>
+  <script src="{{cdn '../../../assets/custom/js/sequence.js'}}"></script>
+  <script src="{{cdn '../../../assets/custom/js/sequence-theme.modern-slide-in.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../assets/custom/js/jquery.simpleGallery.js'}}"></script>
+  <script type="text/javascript" src="../../../assets/custom/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../assets/custom/js/slick.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../assets/custom/js/nouislider.js'}}"></script>
+  <script src="{{cdn '../../../assets/custom/js/custom.js'}}"></script>
+
 </body>
 
 </html>

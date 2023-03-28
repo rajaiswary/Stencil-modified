@@ -51,6 +51,8 @@
 }
 
 .tab-content {
+    display: block !important;
+
     //
     // State for when tab-content has js generated of calculated content, like carousel
     //
